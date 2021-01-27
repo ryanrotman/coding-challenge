@@ -187,3 +187,11 @@ function isPalindrome(str) {
 console.log(isPalindrome("noon"));
 console.log(isPalindrome("horse"));
 console.log(isPalindrome("racecar"));
+
+function isPalindrome2(str) {
+    return str.split("").reverse().join("") === str;
+};
+
+console.log(isPalindrome2("noon"));
+console.log(isPalindrome2("horse"));
+console.log(isPalindrome2("racecar"));
