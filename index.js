@@ -128,12 +128,27 @@
 
 // TODO: create a function that prints all whole numbers from num to a given number
 
-function countDown(num) {
-    for (let i = num; i > 0; i--) {
-        console.log(i);
-    }
-};
+// function countDown(num) {
+//     for (let i = num; i > 0; i--) {
+//         console.log(i);
+//     }
+// };
 
-countDown(10);
-console.log("----------");
-countDown(15);
+// countDown(10);
+// console.log("----------");
+// countDown(15);
+
+
+// TODO: create a function that adds up all the numbers in a given array and returns the total
+
+function sumArray(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+console.log(sumArray([1, 2, 3]));
+console.log(sumArray([2, 2, 2, 2]));
+console.log(sumArray([10, 20, 40, 80]));
