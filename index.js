@@ -19,7 +19,7 @@
 // console.log(add(8, 2));
 // console.log(subtract(10, 5));
 // console.log(multiply(5, 2));
-// console.log(divide(10, 2));
+// console.log(divide(16, 2));
 
 
 // TODO: create a function that determines whether a number is odd or even
@@ -111,16 +111,29 @@
 
 // TODO: create a function that prints even numbers from 0 to a given number
 
-function logEvenNums(num) {
-    for (let i = 0; i <= num; i++) {
-        if (i % 2 === 0) {
-            console.log(i)
-        }
+// function logEvenNums(num) {
+//     for (let i = 0; i <= num; i++) {
+//         if (i % 2 === 0) {
+//             console.log(i)
+//         }
+//     }
+// };
+
+// logEvenNums(9);
+// console.log("----------");
+// logEvenNums(27);
+// console.log("----------");
+// logEvenNums(100);
+
+
+// TODO: create a function that prints all whole numbers from num to a given number
+
+function countDown(num) {
+    for (let i = num; i > 0; i--) {
+        console.log(i);
     }
 };
 
-logEvenNums(9);
+countDown(10);
 console.log("----------");
-logEvenNums(27);
-console.log("----------");
-logEvenNums(100);
+countDown(15);
