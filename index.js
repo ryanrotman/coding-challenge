@@ -156,18 +156,34 @@
 
 // TODO: write a function that takes in a string and outputs the number of vowels (not counting y) in that string
 
-function countVowels(str) {
-    str = str.toLowerCase();
-    let count = 0;
-    let vowels = ("aeiou");
+// function countVowels(str) {
+//     str = str.toLowerCase();
+//     let count = 0;
+//     let vowels = ("aeiou");
+//     for (let i = 0; i < str.length; i++) {
+//         if (vowels.indexOf(str[i]) >= 0) {
+//             count++;
+//         }
+//     }
+//     return count;
+// };
+
+// console.log(countVowels("Hello, World"));
+// console.log(countVowels("Why"));
+// console.log(countVowels("Mongo, Express, React, Node"));
+
+
+// TODO: write a function that takes in a single word as a string and returns true if it’s a palindrome and false otherwise
+
+function isPalindrome(str) {
     for (let i = 0; i < str.length; i++) {
-        if (vowels.indexOf(str[i]) >= 0) {
-            count++;
+        if (str[i] !== str[str.length - (i + 1)]) {
+            return false;
         }
     }
-    return count;
+    return true;
 };
 
-console.log(countVowels("Hello, World"));
-console.log(countVowels("Why"));
-console.log(countVowels("Mongo, Express, React, Node"));
+console.log(isPalindrome("noon"));
+console.log(isPalindrome("horse"));
+console.log(isPalindrome("racecar"));
