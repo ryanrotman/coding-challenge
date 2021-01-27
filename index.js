@@ -42,18 +42,32 @@
 
 // TODO: create a function that prints all whole numbers from 1 to a given number
 
-let logNums = function(num) {
-    for (let i = 1; i <= num; i++) {
-        console.log(i);
-    }
-};
+// let logNums = function(num) {
+//     for (let i = 1; i <= num; i++) {
+//         console.log(i);
+//     }
+// };
 
-logNums(5);
-console.log("----------");
-logNums(10);
-console.log("----------");
-logNums(20);
-console.log("----------");
-logNums(40);
-console.log("----------");
-logNums(100);
+// logNums(5);
+// console.log("----------");
+// logNums(10);
+// console.log("----------");
+// logNums(20);
+// console.log("----------");
+// logNums(40);
+// console.log("----------");
+// logNums(100);
+
+
+// TODO: write a function that takes in two numbers and outputs the max (the greater of the two numbers)
+
+function greaterNumber(num1, num2) {
+    if (num1 > num2) {
+        return num1;
+    }
+    return num2
+}
+
+console.log(greaterNumber(10, 2));
+console.log(greaterNumber(10, 30));
+console.log(greaterNumber(10.9, 11));
