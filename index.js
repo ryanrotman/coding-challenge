@@ -141,14 +141,33 @@
 
 // TODO: create a function that adds up all the numbers in a given array and returns the total
 
-function sumArray(arr) {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-    }
-    return sum;
-}
+// function sumArray(arr) {
+//     let sum = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         sum += arr[i];
+//     }
+//     return sum;
+// };
 
-console.log(sumArray([1, 2, 3]));
-console.log(sumArray([2, 2, 2, 2]));
-console.log(sumArray([10, 20, 40, 80]));
+// console.log(sumArray([1, 2, 3]));
+// console.log(sumArray([2, 2, 2, 2]));
+// console.log(sumArray([10, 20, 40, 80]));
+
+
+// TODO: write a function that takes in a string and outputs the number of vowels (not counting y) in that string
+
+function countVowels(str) {
+    str = str.toLowerCase();
+    let count = 0;
+    let vowels = ("aeiou");
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.indexOf(str[i]) >= 0) {
+            count++;
+        }
+    }
+    return count;
+};
+
+console.log(countVowels("Hello, World"));
+console.log(countVowels("Why"));
+console.log(countVowels("Mongo, Express, React, Node"));
