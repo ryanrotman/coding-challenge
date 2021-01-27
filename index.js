@@ -86,24 +86,41 @@
 // };
 
 // console.log("TOTAL:", totalSum(2));
-// console.log("----------")
+// console.log("----------");
 // console.log("TOTAL:", totalSum(4));
-// console.log("----------")
+// console.log("----------");
 // console.log("TOTAL:", totalSum(10));
 
 
 // TODO: write a function that takes in an array of numbers and outputs the maximum number
 
-function findMax(arr) {
-    let maxNum = arr[0];
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > maxNum) {
-            maxNum = arr[i];
+// function findMax(arr) {
+//     let maxNum = arr[0];
+//     for (let i = 1; i < arr.length; i++) {
+//         if (arr[i] > maxNum) {
+//             maxNum = arr[i];
+//         }
+//     }
+//     return maxNum;
+// };
+
+// console.log(findMax([1, 2, 3]));
+// console.log(findMax([3, 6, 4, 5, 2, 1, 6.1]));
+// console.log(findMax([3, 100, 101]));
+
+
+// TODO: create a function that prints even numbers from 0 to a given number
+
+function logEvenNums(num) {
+    for (let i = 0; i <= num; i++) {
+        if (i % 2 === 0) {
+            console.log(i)
         }
     }
-    return maxNum;
 };
 
-console.log(findMax([1, 2, 3]));
-console.log(findMax([3, 6, 4, 5, 2, 1, 6.1]));
-console.log(findMax([3, 100, 101]));
+logEvenNums(9);
+console.log("----------");
+logEvenNums(27);
+console.log("----------");
+logEvenNums(100);
