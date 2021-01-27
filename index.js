@@ -61,13 +61,32 @@
 
 // TODO: write a function that takes in two numbers and outputs the max (the greater of the two numbers)
 
-function greaterNumber(num1, num2) {
-    if (num1 > num2) {
-        return num1;
-    }
-    return num2
-}
+// function greaterNumber(num1, num2) {
+//     if (num1 > num2) {
+//         return num1;
+//     }
+//     return num2
+// }
 
-console.log(greaterNumber(10, 2));
-console.log(greaterNumber(10, 30));
-console.log(greaterNumber(10.9, 11));
+// console.log(greaterNumber(10, 2));
+// console.log(greaterNumber(10, 30));
+// console.log(greaterNumber(10.9, 11));
+
+
+// TODO: write a function that takes in an integer and outputs the sum of all the numbers from 1 up to that integer
+
+function totalSum(num) {
+    let sum = 0;
+    for (let i = 0; i <= num; i++) {
+        sum += i;
+        console.log("i:", i);
+        console.log("sum:", sum);
+    }
+    return sum;
+};
+
+console.log("TOTAL:", totalSum(2));
+console.log("----------")
+console.log("TOTAL:", totalSum(4));
+console.log("----------")
+console.log("TOTAL:", totalSum(10));
