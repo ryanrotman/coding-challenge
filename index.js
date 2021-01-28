@@ -199,44 +199,65 @@
 
 // TODO: write a function that takes in a string and outputs the first occurrence of a character that does not repeat itself in that string
 
-function firstOccurence(str) {
-    str = str.toLowerCase();
-    for (let i = 0; i < str.length; i++) {
-        let currentCharacter = str[i];
-        let count = 0;
+// function firstOccurence(str) {
+//     str = str.toLowerCase();
+//     for (let i = 0; i < str.length; i++) {
+//         let currentCharacter = str[i];
+//         let count = 0;
 
-        for (let j = 0; j < str.length; j++) {
-            if (str[j] === currentCharacter) {
-                count++;
-            }
-        }
-        if (count === 1) {
-            return currentCharacter;
+//         for (let j = 0; j < str.length; j++) {
+//             if (str[j] === currentCharacter) {
+//                 count++;
+//             }
+//         }
+//         if (count === 1) {
+//             return currentCharacter;
+//         }
+//     }
+// };
+
+// console.log(firstOccurence("The quick brown fox jumps over the calm kitten quietly"));
+// console.log(firstOccurence("This hat is the greatest!"));
+// console.log(firstOccurence("What a wonderful day it has been!"));
+
+// function firstOccurence2(str) {
+//     var charCount = {};
+//     for (var i = 0; i < str.length; i++) {
+//         var currentCharacter = str[i];
+//         if (charCount[currentCharacter]) {
+//             charCount[currentCharacter]++;
+//         } else {
+//             charCount[currentCharacter] = 1;
+//         }
+//     }
+//     for (var x in charCount) {
+//         if (charCount[x] === 1) {
+//             return x;
+//         }
+//     }
+// }
+
+// console.log(firstOccurence2("the quick brown fox jumps over the calm kitten quietly"));
+// console.log(firstOccurence2("this hat is the greatest!"));
+// console.log(firstOccurence2("what a wonderful day it has been!"));
+
+
+// TODO: create a function that solves the Fizz Buzz problem
+
+function fizzBuzz(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 15 === 0) {
+            console.log("Fizz Buzz");
+        } else if (arr[i] % 3 === 0) {
+            console.log("Fizz");
+        } else if (arr[i] % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(arr[i]);
         }
     }
 };
 
-console.log(firstOccurence("The quick brown fox jumps over the calm kitten quietly"));
-console.log(firstOccurence("This hat is the greatest!"));
-console.log(firstOccurence("What a wonderful day it has been!"));
-
-function firstOccurence2(str) {
-    var charCount = {};
-    for (var i = 0; i < str.length; i++) {
-        var currentCharacter = str[i];
-        if (charCount[currentCharacter]) {
-            charCount[currentCharacter]++;
-        } else {
-            charCount[currentCharacter] = 1;
-        }
-    }
-    for (var x in charCount) {
-        if (charCount[x] === 1) {
-            return x;
-        }
-    }
-}
-
-console.log(firstOccurence2("the quick brown fox jumps over the calm kitten quietly"));
-console.log(firstOccurence2("this hat is the greatest!"));
-console.log(firstOccurence2("what a wonderful day it has been!"));
+fizzBuzz([13, 14, 15, 16, 17, 18, 19, 20]);
+console.log("----------");
+fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
