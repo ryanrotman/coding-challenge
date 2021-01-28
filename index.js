@@ -175,23 +175,68 @@
 
 // TODO: write a function that takes in a single word as a string and returns true if it’s a palindrome and false otherwise
 
-function isPalindrome(str) {
+// function isPalindrome(str) {
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] !== str[str.length - (i + 1)]) {
+//             return false;
+//         }
+//     }
+//     return true;
+// };
+
+// console.log(isPalindrome("noon"));
+// console.log(isPalindrome("horse"));
+// console.log(isPalindrome("racecar"));
+
+// function isPalindrome2(str) {
+//     return str.split("").reverse().join("") === str;
+// };
+
+// console.log(isPalindrome2("noon"));
+// console.log(isPalindrome2("horse"));
+// console.log(isPalindrome2("racecar"));
+
+
+// TODO: write a function that takes in a string and outputs the first occurrence of a character that does not repeat itself in that string
+
+function firstOccurence(str) {
+    str = str.toLowerCase();
     for (let i = 0; i < str.length; i++) {
-        if (str[i] !== str[str.length - (i + 1)]) {
-            return false;
+        let currentCharacter = str[i];
+        let count = 0;
+
+        for (let j = 0; j < str.length; j++) {
+            if (str[j] === currentCharacter) {
+                count++;
+            }
+        }
+        if (count === 1) {
+            return currentCharacter;
         }
     }
-    return true;
 };
 
-console.log(isPalindrome("noon"));
-console.log(isPalindrome("horse"));
-console.log(isPalindrome("racecar"));
+console.log(firstOccurence("The quick brown fox jumps over the calm kitten quietly"));
+console.log(firstOccurence("This hat is the greatest!"));
+console.log(firstOccurence("What a wonderful day it has been!"));
 
-function isPalindrome2(str) {
-    return str.split("").reverse().join("") === str;
-};
+function firstOccurence2(str) {
+    var charCount = {};
+    for (var i = 0; i < str.length; i++) {
+        var currentCharacter = str[i];
+        if (charCount[currentCharacter]) {
+            charCount[currentCharacter]++;
+        } else {
+            charCount[currentCharacter] = 1;
+        }
+    }
+    for (var x in charCount) {
+        if (charCount[x] === 1) {
+            return x;
+        }
+    }
+}
 
-console.log(isPalindrome2("noon"));
-console.log(isPalindrome2("horse"));
-console.log(isPalindrome2("racecar"));
+console.log(firstOccurence2("the quick brown fox jumps over the calm kitten quietly"));
+console.log(firstOccurence2("this hat is the greatest!"));
+console.log(firstOccurence2("what a wonderful day it has been!"));
