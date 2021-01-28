@@ -172,6 +172,21 @@
 // console.log(countVowels("Why"));
 // console.log(countVowels("Mongo, Express, React, Node"));
 
+function countVowels2(str) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        let letter = str[i].toLowerCase();
+        if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u") {
+            count += 1;
+        }
+    }
+    return count;
+};
+
+console.log(countVowels2("Hello, World"));
+console.log(countVowels2("Why"));
+console.log(countVowels2("Mongo, Express, React, Node"));
+
 
 // TODO: write a function that takes in a single word as a string and returns true if it’s a palindrome and false otherwise
 
@@ -244,20 +259,20 @@
 
 // TODO: create a function that solves the Fizz Buzz problem
 
-function fizzBuzz(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 15 === 0) {
-            console.log("Fizz Buzz");
-        } else if (arr[i] % 3 === 0) {
-            console.log("Fizz");
-        } else if (arr[i] % 5 === 0) {
-            console.log("Buzz");
-        } else {
-            console.log(arr[i]);
-        }
-    }
-};
+// function fizzBuzz(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] % 15 === 0) {
+//             console.log("Fizz Buzz");
+//         } else if (arr[i] % 3 === 0) {
+//             console.log("Fizz");
+//         } else if (arr[i] % 5 === 0) {
+//             console.log("Buzz");
+//         } else {
+//             console.log(arr[i]);
+//         }
+//     }
+// };
 
-fizzBuzz([13, 14, 15, 16, 17, 18, 19, 20]);
-console.log("----------");
-fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
+// fizzBuzz([13, 14, 15, 16, 17, 18, 19, 20]);
+// console.log("----------");
+// fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
