@@ -309,20 +309,42 @@
 
 // TODO: create a function returns the factorial of a given number
 
-function factorial(num) {
-    let result = 1;
-    for (let i = num; i > 1; i--) {
-        console.log("i = ", i);
-        result = result * i;
-        console.log("result = ", result);
+// function factorial(num) {
+//     let result = 1;
+//     for (let i = num; i > 1; i--) {
+//         console.log("i = ", i);
+//         result = result * i;
+//         console.log("result = ", result);
+//     }
+//     return result;
+// }
+
+// console.log(factorial(4));
+// console.log("----------");
+// console.log(factorial(3));
+// console.log("----------");
+// console.log(factorial(0));
+// console.log("----------");
+// console.log(factorial(1));
+
+
+// TODO: create a function that capitalizes the first letter of every word in a given string
+
+const titleCase = (str) => {
+    console.log("INPUT STRING: ", str);
+    let result = [];
+    let words = str.split(" ");
+    console.log("WORDS FROM INPUT STRING: ", words);
+
+    for (let i = 0; i < words.length; i++) {
+        let word = words[i].split("");
+        console.log("WORD-SEPARATE: ", word);
+        word[0] = word[0].toUpperCase();
+        console.log("UPPER CASE LETTER: ", word[0]);
+        result.push(word.join(""));
+        console.log("RESULT-SEPARATE: ", result);
     }
-    return result;
+    return result.join(" ");
 }
 
-console.log(factorial(4));
-console.log("----------");
-console.log(factorial(3));
-console.log("----------");
-console.log(factorial(0));
-console.log("----------");
-console.log(factorial(1));
+console.log(titleCase("a lannister always pays his debts"));
