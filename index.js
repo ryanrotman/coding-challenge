@@ -172,20 +172,20 @@
 // console.log(countVowels("Why"));
 // console.log(countVowels("Mongo, Express, React, Node"));
 
-function countVowels2(str) {
-    let count = 0;
-    for (let i = 0; i < str.length; i++) {
-        let letter = str[i].toLowerCase();
-        if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u") {
-            count += 1;
-        }
-    }
-    return count;
-};
+// function countVowels2(str) {
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++) {
+//         let letter = str[i].toLowerCase();
+//         if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u") {
+//             count += 1;
+//         }
+//     }
+//     return count;
+// };
 
-console.log(countVowels2("Hello, World"));
-console.log(countVowels2("Why"));
-console.log(countVowels2("Mongo, Express, React, Node"));
+// console.log(countVowels2("Hello, World"));
+// console.log(countVowels2("Why"));
+// console.log(countVowels2("Mongo, Express, React, Node"));
 
 
 // TODO: write a function that takes in a single word as a string and returns true if it’s a palindrome and false otherwise
@@ -276,3 +276,21 @@ console.log(countVowels2("Mongo, Express, React, Node"));
 // fizzBuzz([13, 14, 15, 16, 17, 18, 19, 20]);
 // console.log("----------");
 // fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
+
+
+// TODO: write a function that takes in an array of numbers and outputs the average of all the numbers
+
+function arrayAverage(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    let average = sum / arr.length;
+    return average;
+}
+
+console.log(arrayAverage([1, 4, 7]));
+console.log("----------");
+console.log(arrayAverage([10, 5]));
+console.log("----------");
+console.log(arrayAverage([1.5, 3, 2.5, 1]));
