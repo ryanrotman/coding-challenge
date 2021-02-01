@@ -280,17 +280,28 @@
 
 // TODO: write a function that takes in an array of numbers and outputs the average of all the numbers
 
-function arrayAverage(arr) {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-    }
-    let average = sum / arr.length;
-    return average;
+// function arrayAverage(arr) {
+//     let sum = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         sum += arr[i];
+//     }
+//     let average = sum / arr.length;
+//     return average;
+// }
+
+// console.log(arrayAverage([1, 4, 7]));
+// console.log("----------");
+// console.log(arrayAverage([10, 5]));
+// console.log("----------");
+// console.log(arrayAverage([1.5, 3, 2.5, 1]));
+
+
+// TODO: write a function that takes in an input and returns true if it’s an integer and false otherwise
+
+function isInteger(num) {
+    return Math.floor(num) === num;
 }
 
-console.log(arrayAverage([1, 4, 7]));
-console.log("----------");
-console.log(arrayAverage([10, 5]));
-console.log("----------");
-console.log(arrayAverage([1.5, 3, 2.5, 1]));
+console.log(isInteger("7"));
+console.log(isInteger(7));
+console.log(isInteger(4.3));
