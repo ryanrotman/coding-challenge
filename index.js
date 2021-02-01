@@ -298,10 +298,31 @@
 
 // TODO: write a function that takes in an input and returns true if it’s an integer and false otherwise
 
-function isInteger(num) {
-    return Math.floor(num) === num;
+// function isInteger(num) {
+//     return Math.floor(num) === num;
+// }
+
+// console.log(isInteger("7"));
+// console.log(isInteger(7));
+// console.log(isInteger(4.3));
+
+
+// TODO: create a function returns the factorial of a given number
+
+function factorial(num) {
+    let result = 1;
+    for (let i = num; i > 1; i--) {
+        console.log("i = ", i);
+        result = result * i;
+        console.log("result = ", result);
+    }
+    return result;
 }
 
-console.log(isInteger("7"));
-console.log(isInteger(7));
-console.log(isInteger(4.3));
+console.log(factorial(4));
+console.log("----------");
+console.log(factorial(3));
+console.log("----------");
+console.log(factorial(0));
+console.log("----------");
+console.log(factorial(1));
