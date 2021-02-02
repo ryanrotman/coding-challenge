@@ -330,21 +330,40 @@
 
 // TODO: create a function that capitalizes the first letter of every word in a given string
 
-const titleCase = (str) => {
-    console.log("INPUT STRING: ", str);
-    let result = [];
-    let words = str.split(" ");
-    console.log("WORDS FROM INPUT STRING: ", words);
+// const titleCase = (str) => {
+//     console.log("INPUT STRING: ", str);
+//     let result = [];
+//     let words = str.split(" ");
+//     console.log("WORDS FROM INPUT STRING: ", words);
 
-    for (let i = 0; i < words.length; i++) {
-        let word = words[i].split("");
-        console.log("WORD-SEPARATE: ", word);
-        word[0] = word[0].toUpperCase();
-        console.log("UPPER CASE LETTER: ", word[0]);
-        result.push(word.join(""));
-        console.log("RESULT-SEPARATE: ", result);
+//     for (let i = 0; i < words.length; i++) {
+//         let word = words[i].split("");
+//         console.log("WORD-SEPARATE: ", word);
+//         word[0] = word[0].toUpperCase();
+//         console.log("UPPER CASE LETTER: ", word[0]);
+//         result.push(word.join(""));
+//         console.log("RESULT-SEPARATE: ", result);
+//     }
+//     return result.join(" ");
+// }
+
+// console.log(titleCase("a lannister always pays his debts"));
+
+
+// TODO: write a function that takes an array of integers as an input and outputs the first duplicate. If no duplicates exist, return undefined
+
+function firstDuplicate(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < i; j++) {
+            if (arr[i] === arr[j]) {
+                return arr[i];
+            }
+        }
     }
-    return result.join(" ");
 }
 
-console.log(titleCase("a lannister always pays his debts"));
+console.log(firstDuplicate([2, 5, 6, 3, 5]))
+console.log("----------");
+console.log(firstDuplicate([1, 3, 4, 1, 3, 4]))
+console.log("----------");
+console.log(firstDuplicate([2, 4, 5]))
