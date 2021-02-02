@@ -352,22 +352,41 @@
 
 // TODO: write a function that takes an array of integers as an input and outputs the first duplicate. If no duplicates exist, return undefined
 
-function firstDuplicate(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        console.log("arr[i]:", arr[i]);
-        for (let j = 0; j < i; j++) {
-            console.log("arr[j]", arr[j]);
-            if (arr[i] === arr[j]) {
-                return arr[i];
-            }
+// function firstDuplicate(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         console.log("arr[i]:", arr[i]);
+//         for (let j = 0; j < i; j++) {
+//             console.log("arr[j]", arr[j]);
+//             if (arr[i] === arr[j]) {
+//                 return arr[i];
+//             }
+//         }
+//     }
+// }
+
+// console.log(firstDuplicate([2, 5, 6, 3, 5]))
+// console.log("----------");
+// console.log(firstDuplicate([1, 3, 4, 1, 3, 4]))
+// console.log("----------");
+// console.log(firstDuplicate([2, 4, 5]))
+
+
+// TODO: write a function that takes in a string and returns true if it’s a pangram, or false otherwise
+
+function isPangram(str) {
+    str = str.toLowerCase();
+    const alphabet = "abcdefghijklmnopqrstuvwxyz";
+    for (let i = 0; i < alphabet.length; i++) {
+        console.log(alphabet[i]);
+        if (!str.includes(alphabet[i])) {
+            return false;
         }
     }
+    return true;
 }
 
-console.log(firstDuplicate([2, 5, 6, 3, 5]))
+console.log(isPangram("Watch Jeopardy, Alex Trebek's fun TV quiz game"));
 console.log("----------");
-console.log(firstDuplicate([1, 3, 4, 1, 3, 4]))
+console.log(isPangram("Five hexing wizard bots jump quickly"));
 console.log("----------");
-console.log(firstDuplicate([2, 4, 5]))
-
-
+console.log(isPangram("JavaScript is the best"));
