@@ -354,7 +354,9 @@
 
 function firstDuplicate(arr) {
     for (let i = 0; i < arr.length; i++) {
+        console.log("arr[i]:", arr[i]);
         for (let j = 0; j < i; j++) {
+            console.log("arr[j]", arr[j]);
             if (arr[i] === arr[j]) {
                 return arr[i];
             }
@@ -367,3 +369,5 @@ console.log("----------");
 console.log(firstDuplicate([1, 3, 4, 1, 3, 4]))
 console.log("----------");
 console.log(firstDuplicate([2, 4, 5]))
+
+
