@@ -373,20 +373,42 @@
 
 // TODO: write a function that takes in a string and returns true if it’s a pangram, or false otherwise
 
-function isPangram(str) {
-    str = str.toLowerCase();
-    const alphabet = "abcdefghijklmnopqrstuvwxyz";
-    for (let i = 0; i < alphabet.length; i++) {
-        console.log(alphabet[i]);
-        if (!str.includes(alphabet[i])) {
-            return false;
+// function isPangram(str) {
+//     str = str.toLowerCase();
+//     const alphabet = "abcdefghijklmnopqrstuvwxyz";
+//     for (let i = 0; i < alphabet.length; i++) {
+//         console.log(alphabet[i]);
+//         if (!str.includes(alphabet[i])) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// console.log(isPangram("Watch Jeopardy, Alex Trebek's fun TV quiz game"));
+// console.log("----------");
+// console.log(isPangram("Five hexing wizard bots jump quickly"));
+// console.log("----------");
+// console.log(isPangram("JavaScript is the best"));
+
+
+// TODO: create a function that swaps the letter case of each character in a string
+
+function swapCase(str) {
+    let result = "";
+
+    for (let i = 0; i < str.length; i++) {
+        let letter = str[i];
+
+        if (letter === letter.toUpperCase()) {
+            result += letter.toLowerCase();
+        } else {
+            result += letter.toUpperCase();
         }
     }
-    return true;
-}
+    return result;
+};
 
-console.log(isPangram("Watch Jeopardy, Alex Trebek's fun TV quiz game"));
+console.log(swapCase("StOp"));
 console.log("----------");
-console.log(isPangram("Five hexing wizard bots jump quickly"));
-console.log("----------");
-console.log(isPangram("JavaScript is the best"));
+console.log(swapCase("Luke, I Am Your Father"));
