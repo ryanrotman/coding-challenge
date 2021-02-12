@@ -394,21 +394,42 @@
 
 // TODO: create a function that swaps the letter case of each character in a string
 
-function swapCase(str) {
-    let result = "";
+// function swapCase(str) {
+//     let result = "";
 
-    for (let i = 0; i < str.length; i++) {
-        let letter = str[i];
+//     for (let i = 0; i < str.length; i++) {
+//         let letter = str[i];
 
-        if (letter === letter.toUpperCase()) {
-            result += letter.toLowerCase();
-        } else {
-            result += letter.toUpperCase();
+//         if (letter === letter.toUpperCase()) {
+//             result += letter.toLowerCase();
+//         } else {
+//             result += letter.toUpperCase();
+//         }
+//     }
+//     return result;
+// };
+
+// console.log(swapCase("StOp"));
+// console.log("----------");
+// console.log(swapCase("Luke, I Am Your Father"));
+
+
+// TODO: create a function that takes a string containing space-separated words and returns the longest word in the string
+
+function longestWord(str) {
+    let words = str.split(" ");
+    let longestWord = words[0];
+
+    for (let i = 1; i < words.length; i++) {
+        let currentWord = words[i];
+
+        if (currentWord.length > longestWord.length) {
+            longestWord = currentWord
         }
     }
-    return result;
-};
+    return longestWord;
+}
 
-console.log(swapCase("StOp"));
-console.log("----------");
-console.log(swapCase("Luke, I Am Your Father"));
+console.log(longestWord("i love programming"));
+console.log(longestWord("----------"));
+console.log(longestWord("It's much more difficult to play tennis with a bowling ball than it is to bowl with a tennis ball"));
