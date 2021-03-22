@@ -416,20 +416,45 @@
 
 // TODO: create a function that takes a string containing space-separated words and returns the longest word in the string
 
-function longestWord(str) {
+// function longestWord(str) {
+//     let words = str.split(" ");
+//     let longestWord = words[0];
+
+//     for (let i = 1; i < words.length; i++) {
+//         let currentWord = words[i];
+
+//         if (currentWord.length > longestWord.length) {
+//             longestWord = currentWord
+//         }
+//     }
+//     return longestWord;
+// }
+
+// console.log(longestWord("i love programming"));
+// console.log(longestWord("----------"));
+// console.log(longestWord("It's much more difficult to play tennis with a bowling ball than it is to bowl with a tennis ball"));
+
+
+// TODO: create a function that takes a string and returns the acronym for the given string
+
+function acronymBuilder(str) {
     let words = str.split(" ");
-    let longestWord = words[0];
+    let result = "";
 
-    for (let i = 1; i < words.length; i++) {
-        let currentWord = words[i];
-
-        if (currentWord.length > longestWord.length) {
-            longestWord = currentWord
-        }
+    for (let i = 0; i < words.length; i++) {
+        let word = words[i];
+        result += word[0].toUpperCase();
     }
-    return longestWord;
-}
 
-console.log(longestWord("i love programming"));
-console.log(longestWord("----------"));
-console.log(longestWord("It's much more difficult to play tennis with a bowling ball than it is to bowl with a tennis ball"));
+    return result;
+};
+
+console.log(acronymBuilder("For your information"));
+console.log(acronymBuilder("----------"));
+console.log(acronymBuilder("object oriented programming"));
+console.log(acronymBuilder("----------"));
+console.log(acronymBuilder("model view controller"));
+console.log(acronymBuilder("----------"));
+console.log(acronymBuilder("object relational mapping"));
+console.log(acronymBuilder("----------"));
+console.log(acronymBuilder("create read update delete"));
