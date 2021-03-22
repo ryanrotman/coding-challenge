@@ -462,11 +462,27 @@
 
 // TODO: create a function that takes a string and returns a new string with the order of the words reversed
 
-function reverseWords(str) {
-    let words = str.split(" ");
-    let reversedWords = words.reverse();
+// function reverseWords(str) {
+//     let words = str.split(" ");
+//     let reversedWords = words.reverse();
 
-    return reversedWords.join(" ");
-};
+//     return reversedWords.join(" ");
+// };
 
-console.log(reverseWords("just keep swimming"));
+// console.log(reverseWords("just keep swimming"));
+
+
+// TODO: create a function that takes a string and returns a new string with all of the characters in reverse order (you are not allowed to use the built-in reverse method)
+
+function reverse(str) {
+    let result = "";
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        let letter = str[i];
+        result += letter;
+    }
+
+    return result;
+}
+
+console.log(reverse("just keep swimming"));
