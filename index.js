@@ -437,24 +437,36 @@
 
 // TODO: create a function that takes a string and returns the acronym for the given string
 
-function acronymBuilder(str) {
+// function acronymBuilder(str) {
+//     let words = str.split(" ");
+//     let result = "";
+
+//     for (let i = 0; i < words.length; i++) {
+//         let word = words[i];
+//         result += word[0].toUpperCase();
+//     }
+
+//     return result;
+// };
+
+// console.log(acronymBuilder("For your information"));
+// console.log(acronymBuilder("----------"));
+// console.log(acronymBuilder("object oriented programming"));
+// console.log(acronymBuilder("----------"));
+// console.log(acronymBuilder("model view controller"));
+// console.log(acronymBuilder("----------"));
+// console.log(acronymBuilder("object relational mapping"));
+// console.log(acronymBuilder("----------"));
+// console.log(acronymBuilder("create read update delete"));
+
+
+// TODO: create a function that takes a string and returns a new string with the order of the words reversed
+
+function reverseWords(str) {
     let words = str.split(" ");
-    let result = "";
+    let reversedWords = words.reverse();
 
-    for (let i = 0; i < words.length; i++) {
-        let word = words[i];
-        result += word[0].toUpperCase();
-    }
-
-    return result;
+    return reversedWords.join(" ");
 };
 
-console.log(acronymBuilder("For your information"));
-console.log(acronymBuilder("----------"));
-console.log(acronymBuilder("object oriented programming"));
-console.log(acronymBuilder("----------"));
-console.log(acronymBuilder("model view controller"));
-console.log(acronymBuilder("----------"));
-console.log(acronymBuilder("object relational mapping"));
-console.log(acronymBuilder("----------"));
-console.log(acronymBuilder("create read update delete"));
+console.log(reverseWords("just keep swimming"));
